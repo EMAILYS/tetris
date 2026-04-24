@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-panel">
+            <h1>TETRIS</h1>
+            <div class="score-board">
+                <p>分數: <span id="score">0</span></p>
+                <p>消除行: <span id="lines">0</span></p>
+                <p>等級: <span id="level">1</span></p>
+            </div>
+            <div class="controls-info">
+                <h3>控制方式</h3>
+                <p><b>← / →</b> : 左右移動</p>
+                <p><b>↓</b> : 加速下落</p>
+                <p><b>↑ 或 X</b> : 順時針旋轉</p>
+                <p><b>Z</b> : 逆時針旋轉</p>
+                <p><b>Space</b> : 直接下落</p>
+            </div>
+            <button id="start-btn">開始遊戲</button>
+        </div>
+        
+        <div class="board-container">
+            <canvas id="game-board" width="300" height="600"></canvas>
+            <div id="game-over-screen" class="hidden">
+                <h2>遊戲結束</h2>
+                <button id="restart-btn">再玩一次</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h3>下一個方塊</h3>
+            <canvas id="next-piece" width="120" height="120"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

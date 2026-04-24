@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fcf6eb; /* 暖色背景 */
+    color: #4a4036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    gap: 30px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(200, 180, 160, 0.3);
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 220px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #e67e22; /* 橘色標題 */
+    text-shadow: 2px 2px 4px rgba(230, 126, 34, 0.2);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.score-board, .controls-info {
+    background: #fffbf5;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #f0e6d6;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.score-board p, .controls-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.score-board span {
+    font-weight: 700;
+    color: #d35400;
+    font-size: 1.3rem;
+}
+
+h3 {
+    color: #d35400;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #f0e6d6;
+    padding-bottom: 5px;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    font-family: 'Outfit', sans-serif;
+    box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(211, 84, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(211, 84, 0, 0.3);
+}
+
+.board-container {
+    position: relative;
+    border: 6px solid #e0d5c1;
+    border-radius: 12px;
+    background: #f4eee1;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding: 2px;
+}
+
+canvas {
+    display: block;
+    background: #1a1a1a; /* 雖然整體是暖色，但遊戲區域保持深色以突顯方塊的 Neon glow 效果，或者我們也可以讓內部是深暖色 */
+}
+
+#game-board {
+    background: #2a241f; /* 深暖灰色，讓發光方塊更好看 */
+    border-radius: 6px;
+}
+
+#next-piece {
+    background: #2a241f;
+    border: 4px solid #e0d5c1;
+    border-radius: 10px;
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(252, 246, 235, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(3px);
+}
+
+#game-over-screen h2 {
+    font-size: 3rem;
+    color: #c0392b;
+    text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
+}
+
+.hidden {
+    display: none !important;
+}
